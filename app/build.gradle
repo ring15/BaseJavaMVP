@@ -35,4 +35,20 @@ dependencies {
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    //Glide
+    implementation 'com.github.bumptech.glide:glide:4.8.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'
+    //Retrofit库（已内置OkHttp库，所以不用再添加OkHttp库了）
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    //Retrofit适配Gson的库（添加了这个库后就不用再添加Gson库，因为已经内置）
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    //Retrofit适配Rxjava的库
+    implementation 'com.squareup.retrofit2:adapter-rxjava:2.0.2'
+    //OkHttp3的log库
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.9.0'
+    //Rxjava库
+    implementation 'io.reactivex:rxjava:1.1.1'
+    //RxAndroid库
+    implementation 'io.reactivex:rxandroid:1.1.0'
 }

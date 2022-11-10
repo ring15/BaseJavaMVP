@@ -1,10 +1,11 @@
-package com.ring.basejavamvp;
+package com.ring.basejavamvp.main;
 
+import com.ring.basejavamvp.R;
 import com.ring.basejavamvp.base.BaseActivity;
 import com.ring.basejavamvp.base.BasePresenter;
 import com.ring.basejavamvp.base.BaseView;
 
-public class MainActivity extends BaseActivity<BasePresenter<MainActivity>, MainActivity> implements BaseView {
+public class MainActivity extends BaseActivity<MainContract.MyPresenter, MainContract.MyView> implements MainContract.MyView {
 
     @Override
     protected int getContentView() {
@@ -19,5 +20,10 @@ public class MainActivity extends BaseActivity<BasePresenter<MainActivity>, Main
     @Override
     protected boolean isFullScreen() {
         return true;
+    }
+
+    @Override
+    protected MainContract.MyPresenter getPresenter() {
+        return new MainPresenter();
     }
 }
