@@ -1,14 +1,23 @@
 package com.ring.basejavamvp;
 
-import androidx.appcompat.app.AppCompatActivity;
+import com.ring.basejavamvp.base.BaseActivity;
+import com.ring.basejavamvp.base.BasePresenter;
+import com.ring.basejavamvp.base.BaseView;
 
-import android.os.Bundle;
-
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity<BasePresenter<MainActivity>, MainActivity> implements BaseView {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+    protected int getContentView() {
+        return R.layout.activity_main;
+    }
+
+    @Override
+    protected void initView() {
+
+    }
+
+    @Override
+    protected boolean isFullScreen() {
+        return true;
     }
 }
