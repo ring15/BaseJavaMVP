@@ -4,7 +4,7 @@ import android.util.Log;
 
 public class LogUtil {
 
-    private static String TAG = "ring";
+    private static String TAG = "srh";
     private static boolean LOG;
 
     public static void init(boolean log) {

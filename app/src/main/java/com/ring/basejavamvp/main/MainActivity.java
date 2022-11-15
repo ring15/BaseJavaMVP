@@ -14,7 +14,7 @@ public class MainActivity extends BaseActivity<MainContract.MyPresenter, MainCon
 
     @Override
     protected void initView() {
-
+        mPresenter.getMyInviteList();
     }
 
     @Override
